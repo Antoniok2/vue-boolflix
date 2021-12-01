@@ -1,6 +1,8 @@
 <template>
   <div class="movies">
-      <Movie/>
+      <Movie v-for="film, i in arrayMovie" 
+      :key="i"
+      :details="film"/>
   </div>
 </template>
 
@@ -11,8 +13,10 @@ export default {
   name: 'Main',
   components: {
       Movie
+  },
+  props: {
+    arrayMovie: Array
   }
-  
 }
 </script>
 
@@ -21,9 +25,11 @@ export default {
     .movies {
         display: flex;
         justify-content: flex-start;
+        flex-wrap: wrap;
         width: 60%;
         height: 400px;
         background-color: grey;
         margin: 50px auto;
+        overflow-y: scroll;
     }
 </style>

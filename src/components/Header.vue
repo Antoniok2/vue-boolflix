@@ -44,11 +44,11 @@ export default {
       input {
         padding: 5px 10px;
         border-radius: 20px;
-        color: white;
+        color: black;
       }
 
       button {
-        color: white;
+        color: black;
         padding: 5px 10px;
         border-radius: 20px;
       }
