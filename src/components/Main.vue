@@ -27,7 +27,7 @@ export default {
         justify-content: flex-start;
         flex-wrap: wrap;
         width: 60%;
-        height: 400px;
+        height: 600px;
         background-color: grey;
         margin: 50px auto;
         overflow-y: scroll;
