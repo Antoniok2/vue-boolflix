@@ -4,8 +4,8 @@
       BoolFlix
     </div>
     <div class="search_movies">
-      <input type="text" placeholder="Inserisci qui il titolo">
-      <button>Search</button>
+      <input type="text" placeholder="Inserisci qui il titolo" v-model="testo">
+      <button @click="$emit('search', testo)">Search</button>
     </div>
   </div>
 </template>
@@ -13,7 +13,11 @@
 <script>
 export default {
   name: 'Header',
-  
+  data() {
+    return {
+      testo: ""
+    }
+  }
 }
 </script>
 
