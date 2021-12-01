@@ -6,7 +6,7 @@
     </header>
 
     <main>
-
+      <Main/>
     </main>
 
   </div>
@@ -14,11 +14,13 @@
 
 <script>
 import Header from './components/Header.vue'
+import Main from './components/Main.vue'
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Main
   }
 }
 </script>
@@ -37,5 +39,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 </style>
