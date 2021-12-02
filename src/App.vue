@@ -44,7 +44,7 @@ export default {
       .then((result) => {
         // console.log(result.data.results);
         this.movies = result.data.results;
-        console.log(this.movies);
+        console.log(this.movies)
       }
       ),
       this.inputUtente = testo;

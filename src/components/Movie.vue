@@ -8,7 +8,7 @@
     <h2 v-else-if="details.original_language === 'fr'"><strong>Language:</strong><img src="../assets/Flag_of_France.png" alt=""></h2>
     <h2 v-else-if="details.original_language === 'es'"><strong>Language:</strong><img src="../assets/spainflag.png" alt=""></h2>
     <h2 v-else-if="details.original_language === 'it'"><strong>Language:</strong><img src="../assets/italyflag.png" alt=""></h2>
-    <h2><strong>Voto:</strong> {{details.vote_average}}</h2>
+    <h2><strong>Voto:</strong> {{ stars() }}</h2>
     <span><strong>Overview:</strong> {{details.overview}}</span>
   </div>
 </template>
@@ -22,6 +22,11 @@ export default {
   data() {
     return {
       ImgUrl: "https://image.tmdb.org/t/p/w185"
+    }
+  },
+  methods: {
+    stars() {
+      return this.details.vote_average / 2
     }
   }
 }

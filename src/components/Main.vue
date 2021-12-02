@@ -4,8 +4,8 @@
       :key="i"
       :details="film"/>
 
-      <Serie v-for="serie, a in arraySerie"
-      :key="a"
+      <Serie v-for="serie, i in arraySerie"
+      :key="i"
       :details2="serie"/>
   </div>
 </template>
