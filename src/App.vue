@@ -6,7 +6,7 @@
     </header>
 
     <main>
-      <Main :arrayMovie="movies"/>
+      <Main :arrayMovie="movies" :arraySerie="series"/>
     </main>
 
   </div>
@@ -16,7 +16,6 @@
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import axios from "axios"
-
 export default {
   name: 'App',
   components: {
@@ -26,10 +25,12 @@ export default {
   data() {
     return {
       apiUrl: "https://api.themoviedb.org/3/search/movie?api_key=ae7524e40cf6c1c524835fa04e42516e",
+      apiUrlSeries: "https://api.themoviedb.org/3/search/tv?api_key=ae7524e40cf6c1c524835fa04e42516e",
       query: "&query=",
       language: "&language=it-IT",
       page: "&page=1",
       movies: [],
+      series: [],
       inputUtente: ""
     }
   },
@@ -45,20 +46,25 @@ export default {
         this.movies = result.data.results;
         console.log(this.movies);
       }
-      )
+      ),
+      this.inputUtente = testo;
+      axios
+      .get(this.apiUrlSeries + this.language + this.page + this.query + this.inputUtente)
+      .then((result) => {
+        this.series = result.data.results;
+        console.log(this.series);
+      })
     },
   }
 }
 </script>
 
 <style lang="scss">
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -66,6 +72,4 @@ export default {
   background-color: black;
   height: 100vh;
 }
-
-
 </style>

@@ -30,23 +30,19 @@ export default {
     width: 100%;
     height: 80px;
     background-color: grey;
-
     .title {
       color: white;
       background-color: grey;
       font-size: 30px;
     }
-
     .search_movies {
       margin-right: 20px;
       background-color: grey;
-
       input {
         padding: 5px 10px;
         border-radius: 20px;
         color: black;
       }
-
       button {
         color: black;
         padding: 5px 10px;

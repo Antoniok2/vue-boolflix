@@ -3,19 +3,26 @@
       <Movie v-for="film, i in arrayMovie" 
       :key="i"
       :details="film"/>
+
+      <Serie v-for="serie, a in arraySerie"
+      :key="a"
+      :details2="serie"/>
   </div>
 </template>
 
 <script>
 import Movie from '@/components/Movie.vue'
+import Serie from '@/components/Serie.vue'
 
 export default {
   name: 'Main',
   components: {
-      Movie
+      Movie,
+      Serie
   },
   props: {
-    arrayMovie: Array
+    arrayMovie: Array,
+    arraySerie: Array
   }
 }
 </script>

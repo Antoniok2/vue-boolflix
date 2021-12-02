@@ -12,8 +12,6 @@
 </template>
 
 <script>
-
-
 export default {
   name: 'Movie',
   props: {
@@ -29,26 +27,21 @@ export default {
        height: auto;
        background-color: black;
        margin: 20px;
-
        h1 {
            color: white;
            font-size: 20px;
        }
-
        h2 {
            color: white;
            font-size: 15px;
            margin: 5px 0;
-
            img {
                width: 10%;
            }
        }
-
        span {
            color: white;
            font-size: 10px;
        }
    } 
-
 </style>
