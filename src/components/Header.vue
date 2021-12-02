@@ -28,7 +28,7 @@ export default {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 80px;
+    height: 10vh;
     background-color: grey;
     .title {
       color: white;

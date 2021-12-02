@@ -8,8 +8,12 @@
       <h2 v-else-if="details2.original_language === 'fr'"><strong>Language:</strong><img src="../assets/Flag_of_France.png" alt="fr"></h2>
       <h2 v-else-if="details2.original_language === 'es'"><strong>Language:</strong><img src="../assets/spainflag.png" alt="es"></h2>
       <h2 v-else-if="details2.original_language === 'it'"><strong>Language:</strong><img src="../assets/italyflag.png" alt="it"></h2>
-      <h2 v-if="stars() !== 0 "><strong>Voto:</strong>{{ stars() }}</h2>
-      <span><strong>Overview:</strong> {{details2.overview}}</span>
+      <h2>
+          <strong>Voto:</strong>
+        <font-awesome-icon v-for="i in stars()" :key="i" :icon="['fas', 'star']"></font-awesome-icon>
+         <!-- <font-awesome-icon v-for="j in 5-stars()" :key="j" :icon="['far', 'star']"></font-awesome-icon> -->
+    </h2>
+      <span> {{`Overview: ${details2.overview}`}}</span>
   </div>
 </template>
 
@@ -29,7 +33,7 @@ export default {
   },
   methods: {
       stars() {
-          return Math.floor((this.details2.vote_average) / 2)
+          return Math.ceil((this.details2.vote_average) / 2)
       }
   }
 }

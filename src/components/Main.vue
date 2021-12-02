@@ -33,7 +33,7 @@ export default {
         justify-content: flex-start;
         flex-wrap: wrap;
         width: 60%;
-        height: 600px;
+        height: 80vh;
         background-color: grey;
         margin: 50px auto;
         overflow-y: scroll;
