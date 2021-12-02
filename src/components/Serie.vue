@@ -1,5 +1,6 @@
 <template>
   <div class="serie">
+      <h1>Series</h1>
       <h1><strong>Titolo:</strong> {{details2.name}}</h1>
       <h2><strong>Titolo originale:</strong> {{details2.original_name}}</h2>
       <h2 v-if="details2.original_language === 'en'"><strong>Language:</strong><img src="../assets/englishflag.png" alt=""></h2>

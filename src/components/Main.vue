@@ -13,7 +13,6 @@
 <script>
 import Movie from '@/components/Movie.vue'
 import Serie from '@/components/Serie.vue'
-
 export default {
   name: 'Main',
   components: {
