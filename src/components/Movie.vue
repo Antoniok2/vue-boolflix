@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     stars() {
-      return this.details.vote_average / 2
+      return Math.floor((this.details.vote_average) / 2)
     }
   }
 }

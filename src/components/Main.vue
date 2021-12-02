@@ -1,11 +1,11 @@
 <template>
   <div class="movies">
       <Movie v-for="film, i in arrayMovie" 
-      :key="i"
+      :key="'film' + i"
       :details="film"/>
 
       <Serie v-for="serie, i in arraySerie"
-      :key="i"
+      :key="'serie' + i"
       :details2="serie"/>
   </div>
 </template>

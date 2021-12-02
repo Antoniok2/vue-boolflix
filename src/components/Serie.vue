@@ -13,6 +13,8 @@
   </div>
 </template>
 
+// <font-awesome-icon icon="star"></font-awesome-icon> in questo modo inserisco l'icona di font-awesone
+
 <script>
 export default {
   name: 'Serie',
@@ -21,12 +23,13 @@ export default {
   },
   data() {
     return {
-      ImgUrl: "https://image.tmdb.org/t/p/w185"
+      ImgUrl: "https://image.tmdb.org/t/p/w185",
+      voto: []
     }
   },
   methods: {
       stars() {
-          return this.details2.vote_average / 2
+          return Math.floor((this.details2.vote_average) / 2)
       }
   }
 }
