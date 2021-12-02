@@ -1,12 +1,13 @@
 <template>
   <div class="serie">
-      <h1>Series</h1>
+      <h1 class="type_movie">Series</h1>
+      <div v-if="details2.backdrop_path !== null"> <img :src="ImgUrl + details2.backdrop_path" alt="img"></div>
       <h1><strong>Titolo:</strong> {{details2.name}}</h1>
       <h2><strong>Titolo originale:</strong> {{details2.original_name}}</h2>
-      <h2 v-if="details2.original_language === 'en'"><strong>Language:</strong><img src="../assets/englishflag.png" alt=""></h2>
-      <h2 v-else-if="details2.original_language === 'fr'"><strong>Language:</strong><img src="../assets/Flag_of_France.png" alt=""></h2>
-      <h2 v-else-if="details2.original_language === 'es'"><strong>Language:</strong><img src="../assets/spainflag.png" alt=""></h2>
-      <h2 v-else-if="details2.original_language === 'it'"><strong>Language:</strong><img src="../assets/italyflag.png" alt=""></h2>
+      <h2 v-if="details2.original_language === 'en'"><strong>Language:</strong><img src="../assets/englishflag.png" alt="en"></h2>
+      <h2 v-else-if="details2.original_language === 'fr'"><strong>Language:</strong><img src="../assets/Flag_of_France.png" alt="fr"></h2>
+      <h2 v-else-if="details2.original_language === 'es'"><strong>Language:</strong><img src="../assets/spainflag.png" alt="es"></h2>
+      <h2 v-else-if="details2.original_language === 'it'"><strong>Language:</strong><img src="../assets/italyflag.png" alt="it"></h2>
       <h2><strong>Voto:</strong> {{details2.vote_average}}</h2>
       <span><strong>Overview:</strong> {{details2.overview}}</span>
   </div>
@@ -18,6 +19,11 @@ export default {
   props: {
     details2: Object
   },
+  data() {
+    return {
+      ImgUrl: "https://image.tmdb.org/t/p/w185"
+    }
+  }
 }
 </script>
 
@@ -28,10 +34,21 @@ export default {
        height: auto;
        background-color: black;
        margin: 20px;
+
+       .type_movie {
+           text-align: center;
+           margin-bottom: 5px;
+       }
+
        h1 {
            color: white;
            font-size: 20px;
        }
+
+       div {
+           text-align: center;
+       }
+
        h2 {
            color: white;
            font-size: 15px;
