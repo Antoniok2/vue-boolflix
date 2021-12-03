@@ -14,9 +14,9 @@
       <h2 v-else-if="details2.original_language === 'es'"><strong>Language:</strong><img src="../assets/spainflag.png" alt="es"></h2>
       <h2 v-else-if="details2.original_language === 'it'"><strong>Language:</strong><img src="../assets/italyflag.png" alt="it"></h2>
       <h2>
-          <strong>Voto:</strong>
-          <font-awesome-icon v-for="i in stars()" :key="i" :icon="['fas', 'star']"></font-awesome-icon>
-          <!-- <font-awesome-icon v-for="j in 5-stars()" :key="j" :icon="['far', 'star']"></font-awesome-icon> -->
+        <strong>Voto:</strong>
+        <font-awesome-icon v-for="i in stars()" :key="i" :icon="['fas', 'star']"></font-awesome-icon>
+        <!-- <font-awesome-icon v-for="j in 5-stars()" :key="j" :icon="['far', 'star']"></font-awesome-icon> -->
       </h2>
       <span> {{`Overview: ${details2.overview}`}}</span>
     </div>
@@ -47,58 +47,59 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-   .container {
-       width: calc((100% / 4) - 40px);
-       height: 350px;
-       background-color: black;
-       margin: 20px;
+.container {
+  width: calc((100% / 4) - 40px);
+  height: 350px;
+  background-color: black;
+  margin: 20px;
 
-       &:hover .serie {
-         display: block !important;
-       }
+  &:hover .serie {
+    display: block !important;
+  }
 
-       &:hover .background_image {
-         display: none;
-       }
+  &:hover .background_image {
+    display: none;
+  }
 
-       .background_image {
-         width: 100%;
+  .background_image {
+    width: 100%;
 
-         img {
-           width: 100%;
-         }
-       }
+    img {
+      width: 100%;
+    }
+  }
 
-       .serie {
-         display: none;
+  .serie {
+    display: none;
 
-       .type_movie {
-           text-align: center;
-           margin-bottom: 5px;
-       }
+    .type_movie {
+      text-align: center;
+      margin-bottom: 5px;
+    }
 
-       h1 {
-           color: white;
-           font-size: 20px;
-       }
+    h1 {
+      color: white;
+      font-size: 20px;
+    }
 
-       div {
-           text-align: center;
-       }
+    div {
+      text-align: center;
+    }
 
-       h2 {
-           color: white;
-           font-size: 15px;
-           margin: 5px 0;
-           img {
-               width: 10%;
-           }
-       }
-       span {
-           color: white;
-           font-size: 10px;
-       }
+    h2 {
+      color: white;
+      font-size: 15px;
+      margin: 5px 0;
 
-       }
-   } 
+      img {
+        width: 10%;
+      }
+    }
+
+    span {
+      color: white;
+      font-size: 10px;
+    }
+  }
+} 
 </style>

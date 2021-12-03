@@ -41,32 +41,30 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .container {
-    width: calc((100% / 4) - 40px);
-    height: 350px;
-    background-color: black;
-    margin: 20px;
-    overflow-y: scroll;
+  width: calc((100% / 4) - 40px);
+  height: 350px;
+  background-color: black;
+  margin: 20px;
+  overflow-y: scroll;
 
-    
-    &:hover .movie {
-      display: block !important;
-    }
+  &:hover .movie {
+    display: block !important;
+  }
 
-    &:hover .background_image {
-      display: none;
-    }
+  &:hover .background_image {
+    display: none;
+  }
 
   .background_image {
     width: 100%;
 
     img {
       width: 100%;
-      }
     }
+  }
 
   .movie {
     display: none;
-
 
     h1 {
       color: white;
@@ -77,9 +75,10 @@ export default {
       color: white;
       font-size: 15px;
       margin: 5px 0;
-        img {
-          width: 10%;
-        }
+
+      img {
+        width: 10%;
+      }
     }
 
     span {

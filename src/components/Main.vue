@@ -1,18 +1,19 @@
 <template>
   <div class="movies">
-      <Movie v-for="film, i in arrayMovie" 
-      :key="'film' + i"
-      :details="film"/>
+    <Movie v-for="film, i in arrayMovie" 
+    :key="'film' + i"
+    :details="film"/>
 
-      <Serie v-for="serie, i in arraySerie"
-      :key="'serie' + i"
-      :details2="serie"/>
+    <Serie v-for="serie, i in arraySerie"
+    :key="'serie' + i"
+    :details2="serie"/>
   </div>
 </template>
 
 <script>
 import Movie from '@/components/Movie.vue'
 import Serie from '@/components/Serie.vue'
+
 export default {
   name: 'Main',
   components: {
@@ -28,14 +29,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-    .movies {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        width: 60%;
-        height: 80vh;
-        background-color: grey;
-        margin: 50px auto;
-        overflow-y: scroll;
-    }
+.movies {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 80vh;
+  background-color: grey;
+  margin: 50px auto;
+  overflow-y: scroll;
+}
 </style>

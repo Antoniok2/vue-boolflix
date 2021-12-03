@@ -16,6 +16,7 @@
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import axios from "axios"
+
 export default {
   name: 'App',
   components: {
@@ -45,8 +46,8 @@ export default {
         // console.log(result.data.results);
         this.movies = result.data.results;
         console.log(this.movies)
-      }
-      ),
+      }),
+
       this.inputUtente = testo;
       axios
       .get(this.apiUrlSeries + this.language + this.page + this.query + this.inputUtente)
@@ -54,18 +55,18 @@ export default {
         this.series = result.data.results;
         console.log(this.series);
       })
-    },
+    }
   }
 }
 </script>
 
 <style lang="scss">
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
