@@ -11,7 +11,11 @@
       <h2 v-else-if="details.original_language === 'fr'"><strong>Language:</strong><img src="../assets/Flag_of_France.png" alt=""></h2>
       <h2 v-else-if="details.original_language === 'es'"><strong>Language:</strong><img src="../assets/spainflag.png" alt=""></h2>
       <h2 v-else-if="details.original_language === 'it'"><strong>Language:</strong><img src="../assets/italyflag.png" alt=""></h2>
-      <h2 v-if="stars() > 0 <= 1"><strong>Voto:</strong> {{ stars() }}</h2>
+      <h2>
+        <strong>Voto:</strong>
+        <font-awesome-icon v-for="i in stars()" :key="i" :icon="['fas', 'star']"></font-awesome-icon>
+        <!-- <font-awesome-icon v-for="j in 5-stars()" :key="j" :icon="['far', 'star']"></font-awesome-icon> -->
+      </h2>
       <span><strong>Overview:</strong> {{details.overview}}</span>
     </div>
   </div>
@@ -41,10 +45,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .container {
-  width: calc(100% / 5);
+  width: calc((100% / 5) - 10px);
   height: 340px;
   background-color: rgba(0, 0, 0, 0);
-  margin: 20px 0;
+  margin: 20px 5px;
 
   &:hover .movie {
     display: block !important;

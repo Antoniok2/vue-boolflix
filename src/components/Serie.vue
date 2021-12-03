@@ -48,10 +48,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .container {
-  width: calc(100% / 5);
+  width: calc((100% / 5) - 10px);
   height: 340px;
   background-color: rgba(0, 0, 0, 0);
-  margin: 20px 0;
+  margin: 20px 5px;
 
   &:hover .serie {
     display: block !important;
