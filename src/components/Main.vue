@@ -39,4 +39,13 @@ export default {
   margin: 50px auto;
   overflow-y: scroll;
 }
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
 </style>

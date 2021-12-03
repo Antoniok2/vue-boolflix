@@ -72,6 +72,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("./assets/background_netflix.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
 }
 </style>
