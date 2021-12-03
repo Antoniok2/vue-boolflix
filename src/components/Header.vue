@@ -37,13 +37,12 @@ export default {
   }
 
   .search_movies {
-    margin-right: 20px;
 
     input {
       padding: 5px 10px;
       border-radius: 20px;
       color: white;
-      background-color: rgba(0, 0, 0, 0);
+      background-color: rgba(255, 0, 0, 0);
     }
 
     button {
@@ -51,6 +50,7 @@ export default {
       padding: 5px 10px;
       border-radius: 20px;
       background-color: rgba(0, 0, 0, 0);
+      cursor: pointer;
     }
   }
 }

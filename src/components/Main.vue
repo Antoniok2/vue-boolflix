@@ -33,7 +33,7 @@ export default {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  width: 100%;
+  width: 90%;
   height: 80vh;
   background-color: rgba(0, 0, 0, 0.616);
   margin: 50px auto;
