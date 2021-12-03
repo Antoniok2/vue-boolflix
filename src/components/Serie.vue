@@ -48,10 +48,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .container {
-  width: calc((100% / 4) - 40px);
-  height: 350px;
-  background-color: black;
-  margin: 20px;
+  width: calc(100% / 5);
+  height: 340px;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 20px 0;
 
   &:hover .serie {
     display: block !important;
@@ -63,14 +63,18 @@ export default {
 
   .background_image {
     width: 100%;
+    height: 100%;
 
     img {
       width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 
   .serie {
     display: none;
+    height: 100%;
 
     .type_movie {
       text-align: center;
@@ -84,6 +88,10 @@ export default {
 
     div {
       text-align: center;
+
+      img {
+        width: 20%;
+      }
     }
 
     h2 {
