@@ -1,11 +1,10 @@
 <template>
   <div class="container">
     <div class="background_image">
-      <img :src="ImgUrlBackground + details.poster_path" alt="">
+      <img v-if="details.poster_path !== null" :src="ImgUrlBackground + details.poster_path" alt="">
+      <img v-else-if="details.poster_path === null" src="../assets/back_image.png" alt="">
     </div>
     <div class="movie">
-      <!-- <h1 class="type_movie">Film</h1> -->
-      <!-- <div v-if="details.backdrop_path !== null"> <img :src="ImgUrl + details.backdrop_path" alt="img"></div> -->
       <h1><strong>Titolo:</strong> {{details.title}}</h1>
       <h2><strong>Titolo originale:</strong> {{details.original_title}}</h2>
       <h2 v-if="details.original_language === 'en'"><strong>Language:</strong><img src="../assets/englishflag.png" alt=""></h2>
