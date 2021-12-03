@@ -4,7 +4,7 @@
       BoolFlix
     </div>
     <div class="search_movies">
-      <input type="text" placeholder="Inserisci qui il titolo" v-model="testo">
+      <input type="text" placeholder="Inserisci qui il titolo" v-model="testo" @keyup.enter="$emit('search', testo)">
       <button @click="$emit('search', testo)">Search</button>
     </div>
   </div>
