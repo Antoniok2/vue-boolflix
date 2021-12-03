@@ -33,9 +33,9 @@ export default {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  width: 60%;
+  width: 90%;
   height: 80vh;
-  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.616);
   margin: 50px auto;
   overflow-y: scroll;
 }

@@ -41,11 +41,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .container {
-  width: calc((100% / 4) - 40px);
-  height: 350px;
-  background-color: black;
-  margin: 20px;
-  overflow-y: scroll;
+  width: calc(100% / 5);
+  height: 340px;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 20px 0;
 
   &:hover .movie {
     display: block !important;
@@ -57,14 +56,18 @@ export default {
 
   .background_image {
     width: 100%;
+    height: 100%;
 
     img {
       width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 
   .movie {
     display: none;
+    height: 100%;
 
     h1 {
       color: white;
