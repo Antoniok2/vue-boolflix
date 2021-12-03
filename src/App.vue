@@ -71,7 +71,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background-image: url("./assets/background_netflix.jpg");
   height: 100vh;
 }
 </style>

@@ -29,11 +29,10 @@ export default {
   align-items: center;
   width: 100%;
   height: 10vh;
-  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.336);
 
   .title {
-    color: white;
-    background-color: grey;
+    color: red;
     font-size: 30px;
   }
 
