@@ -34,6 +34,10 @@ export default {
   .title {
     color: red;
     font-size: 30px;
+    font-family: fantasy;
+    border: solid 1px red;
+    border-radius: 25px;
+    padding: 2px 15px;
   }
 
   .search_movies {
