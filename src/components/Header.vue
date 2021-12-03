@@ -38,18 +38,19 @@ export default {
 
   .search_movies {
     margin-right: 20px;
-    background-color: grey;
 
     input {
       padding: 5px 10px;
       border-radius: 20px;
-      color: black;
+      color: white;
+      background-color: rgba(0, 0, 0, 0);
     }
 
     button {
-      color: black;
+      color: white;
       padding: 5px 10px;
       border-radius: 20px;
+      background-color: rgba(0, 0, 0, 0);
     }
   }
 }
