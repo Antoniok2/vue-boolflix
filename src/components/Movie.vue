@@ -67,9 +67,6 @@ export default {
   .movie {
     display: none;
 
-    div {
-      text-align: center;
-    }
 
     h1 {
       color: white;
