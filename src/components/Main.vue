@@ -45,7 +45,7 @@ export default {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: red;
+  background: rgba(255, 0, 0, 0.1);
   border-radius: 10px;
 }
 </style>

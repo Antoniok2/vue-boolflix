@@ -48,10 +48,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .container {
-  width: calc((100% / 5) - 10px);
+  width: calc((100% / 6) - 10px);
   height: 340px;
   background-color: rgba(0, 0, 0, 0);
   margin: 20px 5px;
+  text-align: center;
+  cursor: pointer;
+  overflow-y: scroll;
 
   &:hover .serie {
     display: block !important;
@@ -86,27 +89,20 @@ export default {
       font-size: 20px;
     }
 
-    div {
-      text-align: center;
-
-      img {
-        width: 20%;
-      }
-    }
-
     h2 {
       color: white;
       font-size: 15px;
       margin: 5px 0;
 
       img {
-        width: 10%;
+        width: 5%;
       }
     }
 
     span {
       color: white;
-      font-size: 10px;
+      font-size: 15px;
+      padding: 0 5px;
     }
   }
 } 
